@@ -28,6 +28,8 @@ android {
 
     buildTypes {
         release {
+            // TODO: Configure proper release signing before production deployment
+            // For development, using debug signing configuration
             signingConfig = signingConfigs.debug
         }
     }

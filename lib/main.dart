@@ -23,6 +23,12 @@ class FocusFlowApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  void _showComingSoonMessage() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Feature coming soon!')),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,34 +46,19 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             ElevatedButton.icon(
-              onPressed: () {
-                // Placeholder for future functionality
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Feature coming soon!')),
-                );
-              },
+              onPressed: _showComingSoonMessage,
               icon: const Icon(Icons.task_alt),
               label: const Text('Tasks'),
             ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
-              onPressed: () {
-                // Placeholder for future functionality
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Feature coming soon!')),
-                );
-              },
+              onPressed: _showComingSoonMessage,
               icon: const Icon(Icons.timer),
               label: const Text('Focus Timer'),
             ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
-              onPressed: () {
-                // Placeholder for future functionality
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Feature coming soon!')),
-                );
-              },
+              onPressed: _showComingSoonMessage,
               icon: const Icon(Icons.analytics),
               label: const Text('Analytics'),
             ),

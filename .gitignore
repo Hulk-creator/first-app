@@ -75,8 +75,7 @@ app.*.map.json
 **/ios/Flutter/App.framework
 **/ios/Flutter/Flutter.framework
 **/ios/Flutter/Flutter.podspec
-# Keep Generated.xcconfig for manual Flutter setup
-# **/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/Generated.xcconfig
 **/ios/Flutter/ephemeral
 **/ios/Flutter/app.flx
 **/ios/Flutter/app.zip

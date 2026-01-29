@@ -20,15 +20,31 @@ void main() {
     expect(find.text('Analytics'), findsOneWidget);
   });
 
-  testWidgets('Buttons show snackbar message', (WidgetTester tester) async {
+  testWidgets('All buttons show snackbar message', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const FocusFlowApp());
 
-    // Tap the Tasks button.
+    // Test Tasks button
     await tester.tap(find.text('Tasks'));
     await tester.pumpAndSettle();
+    expect(find.text('Feature coming soon!'), findsOneWidget);
+    
+    // Dismiss snackbar
+    await tester.tap(find.text('Feature coming soon!'));
+    await tester.pumpAndSettle();
 
-    // Verify snackbar is shown.
+    // Test Focus Timer button
+    await tester.tap(find.text('Focus Timer'));
+    await tester.pumpAndSettle();
+    expect(find.text('Feature coming soon!'), findsOneWidget);
+    
+    // Dismiss snackbar
+    await tester.tap(find.text('Feature coming soon!'));
+    await tester.pumpAndSettle();
+
+    // Test Analytics button
+    await tester.tap(find.text('Analytics'));
+    await tester.pumpAndSettle();
     expect(find.text('Feature coming soon!'), findsOneWidget);
   });
 }

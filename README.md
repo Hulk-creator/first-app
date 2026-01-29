@@ -45,7 +45,8 @@ Before you begin, ensure you have the following installed:
 ```bash
 git clone https://github.com/Hulk-creator/first-app.git
 cd first-app
-git checkout flutter-app-setup
+# If working with the flutter-app-setup branch:
+# git checkout flutter-app-setup
 ```
 
 ### 2. Install Dependencies
