@@ -37,10 +37,10 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Icon(
+              Icon(
                 Icons.center_focus_strong,
                 size: 80,
-                color: Colors.deepPurple,
+                color: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 24),
               const Text(
@@ -51,11 +51,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const Text(
+              Text(
                 'Your productivity companion',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
               ),
               const SizedBox(height: 48),
